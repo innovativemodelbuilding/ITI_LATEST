@@ -1,0 +1,180 @@
+<!-- index_led_products.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LED Products</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p+c72PHGdzKfYHu+UH0eYD0vKt+JXhWfB4b82N10q3U6XyX+FChxpKz+NDhHUpCjZD6jDZlD0v2LqvU3KIyxwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style/_led_products.css">
+  <style>
+    /* hide-on-scroll */
+    #site-header { background:#f0f0f0; padding:2rem 5%; transition:transform .3s ease; }
+    #site-header.hidden { transform:translateY(-100%); }
+    .swiper-button-next, .swiper-button-prev { color:#000; font-size:2rem; }
+  </style>
+  <!-- Swiper’s core CSS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+
+</head>
+<body>
+
+<header id="site-header" class="header">
+  <a href="index_led_products.html" class="logo">LED Products</a>
+  <nav class="navbar">
+    <a href="index_led_products.html">Home</a>
+    <a href="pages/services_led_products.html">Services</a>
+    <a href="pages/about_led_products.html">About Us</a>
+    <a href="pages/contact_led_products.html">Contact</a>
+  </nav>
+</header>
+
+<section class="home" id="home">
+  <h1 data-speed="-2" class="home-parallax">Illuminate Your Space</h1>
+  <p data-speed="5" class="home-parallax">
+    Premium LED lighting solutions for home, office, and industry.
+  </p>
+  <a data-speed="7" href="pages/services_led_products.html" class="btn home-parallax">Our Services</a>
+</section>
+
+<section class="icons-container">
+  <div class="icons">
+    <i class="fas fa-lightbulb"></i>
+    <div class="content">
+      <h3>200+</h3><p>Products</p>
+    </div>
+  </div>
+  <div class="icons">
+    <i class="fas fa-users"></i>
+    <div class="content">
+      <h3>150+</h3><p>Clients</p>
+    </div>
+  </div>
+  <div class="icons">
+    <i class="fas fa-tools"></i>
+    <div class="content">
+      <h3>500+</h3><p>Installations</p>
+    </div>
+  </div>
+  <div class="icons">
+    <i class="fas fa-headset"></i>
+    <div class="content">
+      <h3>24/7</h3><p>Support</p>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <h1 class="heading"> featured <span>products</span> </h1>
+  <div class="box-container">
+    <div class="box">
+      <img src="../main_images/led_bulb.jpg" alt="LED Bulb">
+      <h3>LED Bulbs</h3>
+      <p>Energy‑saving bulbs in various color temperatures.</p>
+      <a href="pages/services_led_products.html" class="btn">Learn More</a>
+    </div>
+    <div class="box">
+      <img src="../main_images/led_panel.jpg" alt="LED Panel">
+      <h3>LED Panels</h3>
+      <p>Slim recessed panels for offices and showrooms.</p>
+      <a href="pages/services_led_products.html" class="btn">Learn More</a>
+    </div>
+    <div class="box">
+      <img src="../main_images/led_strip.jpg" alt="LED Strip">
+      <h3>LED Strips</h3>
+      <p>Flexible strips for accent and decorative lighting.</p>
+      <a href="pages/services_led_products.html" class="btn">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<section class="services-preview" id="services-preview">
+  <h1 class="heading"> our <span>services</span> </h1>
+  <div class="box-container">
+    <div class="box">
+      <i class="fas fa-pencil-ruler"></i>
+      <h3>Lighting Design</h3>
+      <p>Custom layouts to optimize light distribution and comfort.</p>
+      <a href="pages/services_led_products.html" class="btn">read more</a>
+    </div>
+    <div class="box">
+      <i class="fas fa-tools"></i>
+      <h3>Installation</h3>
+      <p>Professional fitting and wiring for all LED products.</p>
+      <a href="pages/services_led_products.html" class="btn">read more</a>
+    </div>
+    <div class="box">
+      <i class="fas fa-wrench"></i>
+      <h3>Maintenance</h3>
+      <p>Periodic checks and replacements to ensure longevity.</p>
+      <a href="pages/services_led_products.html" class="btn">read more</a>
+    </div>
+    <div class="box">
+      <i class="fas fa-chart-line"></i>
+      <h3>Energy Audit</h3>
+      <p>Assess usage and recommend efficient LED upgrades.</p>
+      <a href="pages/services_led_products.html" class="btn">read more</a>
+    </div>
+  </div>
+</section>
+
+<section class="featured" id="featured">
+  <h1 class="heading"><span>featured</span> installation</h1>
+  <div class="swiper featured-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide box">
+        <img src="main_images/led_install_1.jpg" alt="Office Lighting">
+        <div class="content">
+          <h3>Office Upgrade</h3>
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+          <p>Replaced fluorescent with LED panels in a corporate office.</p>
+        </div>
+      </div>
+      <div class="swiper-slide box">
+        <img src="main_images/led_install_2.jpg" alt="Retail Lighting">
+        <div class="content">
+          <h3>Retail Display</h3>
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+          <p>Accent lighting installation for a boutique showroom.</p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<section class="footer" id="footer">
+  <div class="box-container">
+    <div class="box"><h3>Quick Links</h3><a href="index_led_products.html"><i class="fas fa-arrow-right"></i> Home</a><a href="pages/services_led_products.html"><i class="fas fa-arrow-right"></i> Services</a><a href="pages/about_led_products.html"><i class="fas fa-arrow-right"></i> About Us</a><a href="pages/contact_led_products.html"><i class="fas fa-arrow-right"></i> Contact</a></div>
+    <div class="box"><h3>Contact Info</h3><a href="#"><i class="fas fa-phone"></i> +91 90000 55667</a><a href="#"><i class="fas fa-envelope"></i> led@iti.com</a><a href="#"><i class="fas fa-map-marker-alt"></i> Pune, India</a></div>
+  </div>
+  <div class="credit">&#169; LED Products | All Rights Reserved</div>
+</section>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+  (function(){
+    let lastY=window.pageYOffset;
+    const header=document.getElementById("site-header");
+    window.addEventListener("scroll",()=>{const y=window.pageYOffset;if(y>lastY)header.classList.add("hidden");else header.classList.remove("hidden");lastY=y;});
+  })();
+  new Swiper(".featured-slider",{slidesPerView:2,spaceBetween:30,loop:true,pagination:{el:".swiper-pagination",clickable:true},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},breakpoints:{768:{slidesPerView:1},1024:{slidesPerView:2}}});
+</script>
+
+</body>
+</html>
