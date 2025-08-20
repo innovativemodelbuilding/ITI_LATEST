@@ -255,27 +255,39 @@
 <body>
 
 
-    <!-- Header (same as your index) -->
-<header id="site-header" class="header">
+    <!-- HEADER -->
+<header id="site-header" class="header" role="banner">
+  <div class="header-bar">
+    <!-- Erik Terwan hamburger -->
+    <nav id="menuToggle" aria-label="Primary">
+      <!-- Hidden checkbox controls the menu state -->
+      <input type="checkbox" id="menuCheckbox" aria-label="Toggle menu" />
 
-    <div id="menu-btn" class="fas fa-bars"></div>
+      <!-- The three bars -->
+      <span></span>
+      <span></span>
+      <span></span>
 
-    <a href="../index_ev.html" class="logo"> <span> Institute </span>of technology and Innovation </a>
-
-   <nav class="navbar">
-        <a href="../index_ev.html">Home</a>
-        <a href="./ev.html">EVs</a>
-        <a href="./ev_customer.html">Customer</a>
-        <a href="https://forms.gle/JpLhKTdxGZ2HB2Ag9">Franchise</a>
-        <a href="./ev_aboutus.html">About Us</a>
-        <a href="./ev_contact_us.html">Contact</a>
-        <a href="./ev_career.html">Career</a>
-        <a href="./ev_training.html">Training</a>
-        <a href="./ev_spare_parts.html">Spare Parts</a>
+      <!-- Drawer menu -->
+      <ul id="menu" role="menu">
+        <li role="none"><a role="menuitem" href="../index_ev.html"            data-close>Home</a></li>
+        <li role="none"><a role="menuitem" href="../EV_pages/ev.html"      data-close>EVs</a></li>
+        <li role="none"><a role="menuitem" href="../EV_pages/ev_customer.html" data-close>Customer</a></li>
+        <li role="none"><a role="menuitem" href="https://forms.gle/JpLhKTdxGZ2HB2Ag9" target="_blank" rel="noopener">Franchise</a></li>
+        <li role="none"><a role="menuitem" href="../EV_pages/ev_aboutus.html"   data-close>About Us</a></li>
+        <li role="none"><a role="menuitem" href="../EV_pages/ev_contact_us.html" data-close>Contact</a></li>
+        <li role="none"><a role="menuitem" href="../EV_pages/ev_career.html"     data-close>Career</a></li>
+        <li role="none"><a role="menuitem" href="../EV_pages/ev_training.html"   data-close>Training</a></li>
+        <li role="none"><a role="menuitem" href="../EV_pages/ev_spare_parts.html" data-close>Spare Parts</a></li>
+      </ul>
     </nav>
 
-</header> 
-
+    <!-- Centered brand -->
+    <a href="../index_ev.html" class="logo" aria-label="Institute of Technology and Innovation">
+      <span>Institute</span><wbr> of <wbr>Technology and Innovation
+    </a>
+  </div>
+</header>
   <!-- Hero Section -->
   <section class="hero-contact">
     <h3>Contact Us</h3>

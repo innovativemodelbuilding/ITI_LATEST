@@ -834,3 +834,399 @@ section{
                 font-size: 1.5rem;
             }
         }
+
+        /* =========================
+   Hamburger + Centered Brand
+   Works with the new HTML:
+   - #nav-toggle (checkbox)
+   - .hamburger
+   - .header-bar
+   - .navbar (drawer)
+   - .menu-list, .menu-close, .backdrop
+   - .right-spacer
+   ========================= */
+
+/* Base header bar: keep brand perfectly centered by balancing hamburger and spacer */
+#site-header.header {
+  background: #fff;
+  padding: 2rem 9%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+#site-header .header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* left: hamburger, center: logo, right: spacer */
+  gap: 5rem;
+}
+
+/* Brand — force it into true center on all devices */
+#site-header .logo {
+  position: absolute;          /* take it out of the flex flow */
+  left: 50%;
+  transform: translateX(-50%); /* lock to horizontal center */
+  
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--navy-blue);
+  text-align: center;
+  pointer-events: auto;
+  white-space: nowrap;
+}
+
+#site-header .logo span { 
+  color: var(--orange); 
+}
+
+
+
+
+/* Accessible checkbox (hidden) */
+#nav-toggle.nav-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+
+}
+
+
+
+
+
+/* Drawer (off-canvas) */
+#site-header .navbar {
+  position: fixed;
+  inset: 0 0 0 auto;        /* anchor to right by default */
+  width: min(88vw, 320px);
+  transform: translateX(100%);
+  background: #fff;
+  box-shadow: -2px 0 16px rgba(0,0,0,.15);
+  z-index: 1001;
+  padding: 2rem 1.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: transform .3s ease;
+  border-left: var(--border);
+}
+
+/* Open state via checkbox */
+#nav-toggle:checked ~ .navbar {
+  transform: translateX(0);
+}
+
+/* Backdrop to close drawer */
+#site-header .backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.4);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+  transition: opacity .3s ease;
+}
+#nav-toggle:checked ~ .backdrop {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Close button inside drawer (top-right) */
+#site-header .menu-close {
+  align-self: flex-end;
+  font-size: 3.2rem;
+  line-height: 1;
+  color: var(--navy-blue);
+  cursor: pointer;
+  display: inline-block;
+  margin: -0.5rem -0.25rem 0 0;
+}
+
+/* Menu list */
+#site-header .menu-list {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+#site-header .menu-list a {
+  display: block;
+  font-size: 1.7rem;
+  color: var(--navy-blue);
+  padding: 0.9rem 0.75rem;
+  border-radius: 0.5rem;
+}
+#site-header .menu-list a:hover {
+  background: var(--light-orange);
+  color: var(--navy-blue);
+}
+
+/* Ensure your old inline nav doesn’t show in header-bar (we use the drawer only) */
+#site-header .header-bar .navbar,
+#site-header .header .navbar {
+  display: none !important;
+}
+
+/* Hide your old responsive dropdown logic for .header .navbar from previous CSS */
+.header .navbar { position: static; clip-path: none; border: 0; }
+
+/* Desktop tweaks — keep hamburger on desktop too, per your ask */
+@media (min-width: 1024px) {
+  #site-header .logo { font-size: 2.2rem; }
+}
+
+/* Small screens: allow the drawer to fill more width if needed */
+@media (max-width: 420px) {
+  #site-header .navbar { width: min(96vw, 360px); }
+}
+
+/* Maintain your hide-on-scroll behavior */
+#site-header.hidden { transform: translateY(-100%); }
+
+/* Swiper arrows (you set color/size in your inline style; repeat for safety) */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000;
+  font-size: 2rem;
+}
+
+/* ===== FINAL: Centered logo + no overlap (PC + Mobile) ===== */
+
+/* Make the header the positioning context and kill old flex layout */
+#site-header {
+  position: sticky; /* or relative if you don't want sticky */
+  top: 0;
+  z-index: 1000;
+  display: block;   /* override older .header { display:flex } */
+}
+
+
+
+/* TRUE centered brand */
+#site-header .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  /* Typography */
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--navy-blue);
+  line-height: 1.25;
+  text-align: center;
+
+
+}
+
+/* Accent color for “Institute” */
+#site-header .logo span { color: var(--orange); }
+
+/* Desktop: keep single line when possible */
+@media (min-width: 1024px) {
+  #site-header .logo { white-space: nowrap; }
+}
+
+/* Mobile: allow neat wrapping and shrink a touch */
+@media (max-width: 1023.98px) {
+  #site-header .logo {
+    white-space: normal;   /* allow wrapping at spaces and <wbr> */
+    text-wrap: balance;    /* nicer multi-line balance (modern browsers) */
+    font-size: 1.6rem;
+  }
+}
+
+/* Ultra-narrow phones */
+@media (max-width: 380px) {
+  #site-header .logo { font-size: 1.45rem; }
+}
+
+/* ================================
+   Erik Terwan hamburger (adapted)
+   — Lives inside #site-header .header-bar
+   — Keeps brand centered, no overlap
+   ================================ */
+
+/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
+
+body
+
+
+main {
+  width: calc(100% - 240px);
+  max-width: 680px;
+  margin: 100px auto;
+}
+
+p {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* Menu code starts here */
+
+#menuToggle
+{
+  display: block;
+  /* You can also use relative/absolute here if you want to stay on the top */
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  max-width: 400px;
+  width: 100vw;
+  max-height: 100vh;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menu li label
+{
+  cursor: pointer;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
