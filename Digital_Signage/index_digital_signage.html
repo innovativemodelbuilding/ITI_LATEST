@@ -1,0 +1,186 @@
+<!-- index_digital_signage.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Swiper’s core CSS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digital Signage</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p+c72PHGdzKfYHu+UH0eYD0vKt+JXhWfB4b82N10q3U6XyX+FChxpKz+NDhHUpCjZD6jDZlD0v2LqvU3KIyxwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style/_digital_signage.css">
+  <style>
+    /* hide-on-scroll */
+    #site-header { background:#f0f0f0; padding:2rem 5%; transition:transform .3s ease; }
+    #site-header.hidden { transform:translateY(-100%); }
+    .swiper-button-next, .swiper-button-prev { color:#000; font-size:2rem; }
+  </style>
+</head>
+<body>
+
+<header id="site-header" class="header">
+  <a href="index_digital_signage.html" class="logo">Digital Signage</a>
+  <nav class="navbar">
+    <a href="index_digital_signage.html">Home</a>
+    <a href="pages/services_digital_signage.html">Services</a>
+    <a href="pages/about_digital_signage.html">About Us</a>
+    <a href="pages/contact_digital_signage.html">Contact</a>
+  </nav>
+</header>
+
+<section class="home" id="home">
+  <h1 data-speed="-2" class="home-parallax">Engage Audiences<br> Digitally</h1>
+  <a data-speed="7" href="pages/services_digital_signage.html" class="btn home-parallax">Our Services</a>
+</section>
+
+<section class="icons-container">
+  <div class="icons">
+    <i class="fas fa-tv"></i>
+    <div class="content">
+      <h3>1,000+</h3><p>Displays Deployed</p>
+    </div>
+  </div>
+  <div class="icons">
+    <i class="fas fa-users"></i>
+    <div class="content">
+      <h3>500+</h3><p>Happy Clients</p>
+    </div>
+  </div>
+  <div class="icons">
+    <i class="fas fa-headset"></i>
+    <div class="content">
+      <h3>24/7</h3><p>Support</p>
+    </div>
+  </div>
+  <div class="icons">
+    <i class="fas fa-briefcase"></i>
+    <div class="content">
+      <h3>10+</h3><p>Years Experience</p>
+    </div>
+  </div>
+</section>
+
+<section class="services-preview" id="services-preview">
+  <h1 class="heading"> our <span>services</span> </h1>
+  <div class="box-container">
+    <div class="box">
+      <i class="fas fa-pencil-alt"></i>
+      <h3>Content Creation</h3>
+      <p>Custom graphics, animations & videos tailored to your brand.</p>
+      <a href="pages/services_digital_signage.html" class="btn">read more</a>
+    </div>
+    <div class="box">
+      <i class="fas fa-tools"></i>
+      <h3>Hardware Installation</h3>
+      <p>Professional mounting, cabling & setup of displays.</p>
+      <a href="pages/services_digital_signage.html" class="btn">read more</a>
+    </div>
+    <div class="box">
+      <i class="fas fa-cloud"></i>
+      <h3>Remote Management</h3>
+      <p>Cloud platform for scheduling & monitoring content.</p>
+      <a href="pages/services_digital_signage.html" class="btn">read more</a>
+    </div>
+    <div class="box">
+      <i class="fas fa-chart-line"></i>
+      <h3>Analytics & Reporting</h3>
+      <p>Insights on viewer engagement & content performance.</p>
+      <a href="pages/services_digital_signage.html" class="btn">read more</a>
+    </div>
+  </div>
+</section>
+
+<section class="featured" id="featured">
+  <h1 class="heading"><span>featured</span> projects</h1>
+  <div class="swiper featured-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide box">
+        <img src="main_images/ds_project_1.jpg" alt="Retail Display">
+        <div class="content">
+          <h3>Retail Store Displays</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          </div>
+          <p>Interactive touch‑screen kiosks boosting customer engagement.</p>
+        </div>
+      </div>
+      <div class="swiper-slide box">
+        <img src="main_images/ds_project_2.jpg" alt="Corporate Lobby">
+        <div class="content">
+          <h3>Corporate Lobby Video Walls</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+          </div>
+          <p>High-resolution LED walls for dynamic corporate messaging.</p>
+        </div>
+      </div>
+      <!-- add more slides as needed -->
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<section class="footer" id="footer">
+  <div class="box-container">
+    <div class="box">
+      <h3>Quick Links</h3>
+      <a href="index_digital_signage.html"><i class="fas fa-arrow-right"></i> Home</a>
+      <a href="pages/services_digital_signage.html"><i class="fas fa-arrow-right"></i> Services</a>
+      <a href="pages/about_digital_signage.html"><i class="fas fa-arrow-right"></i> About Us</a>
+      <a href="pages/contact_digital_signage.html"><i class="fas fa-arrow-right"></i> Contact</a>
+    </div>
+    <div class="box">
+      <h3>Contact Info</h3>
+      <a href="#"><i class="fas fa-phone"></i> +91 98765 43210</a>
+      <a href="#"><i class="fas fa-envelope"></i> signage@iti.com</a>
+      <a href="#"><i class="fas fa-map-marker-alt"></i> Bangalore, India</a>
+    </div>
+  </div>
+  <div class="credit">&#169; Digital Signage | All Rights Reserved</div>
+</section>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+  (function(){
+    let lastY = window.pageYOffset;
+    const header = document.getElementById("site-header");
+    window.addEventListener("scroll", ()=>{
+      const y = window.pageYOffset;
+      if (y > lastY) header.classList.add("hidden");
+      else header.classList.remove("hidden");
+      lastY = y;
+    });
+  })();
+  new Swiper(".featured-slider", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+    pagination: { el: ".swiper-pagination", clickable: true },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+  });
+</script>
+
+</body>
+</html>

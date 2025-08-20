@@ -1,0 +1,95 @@
+<!-- pages/services_atn.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services – ATN</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p+c72PHGdzKfYHu+UH0eYD0vKt+JXhWfB4b82N10q3U6XyX+FChxpKz+NDhHUpCjZD6jDZlD0v2LqvU3KIyxwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="../style/_atn.css"/>
+  <style>
+    #site-header { background:#f0f0f0; padding:2rem 5%; transition:transform .3s ease; }
+    #site-header.hidden { transform:translateY(-100%); }
+    .box-container { display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; }
+    .box { flex:1 1 calc(45% - 2rem); max-width:calc(45% - 2rem); padding:2rem; text-align:center; }
+    .box i { font-size:3rem; color:#007acc; margin-bottom:1rem; }
+    @media(max-width:800px){ .box{ flex:1 1100%; max-width:100%; } }
+  </style>
+</head>
+<body>
+
+<header id="site-header" class="header">
+  <a href="../index_atn.html" class="logo">ATN (Advanced Technology Networks)</a>
+  <nav class="navbar">
+    <a href="../index_atn.html">Home</a>
+    <a href="./services_atn.html">Services</a>
+    <a href="./about_atn.html">About Us</a>
+    <a href="./contact_atn.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h1 class="section-heading">Our <span>Services</span></h1>
+  <div class="box-container">
+    <div class="box">
+      <i class="fas fa-network-wired"></i>
+      <h3>Network Design</h3>
+      <p>Architect and deploy robust LAN/WAN solutions tailored to your growth strategy.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Cybersecurity</h3>
+      <p>Penetration testing, firewall configuration, and continuous threat monitoring.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-cloud"></i>
+      <h3>Cloud Services</h3>
+      <p>Secure migration, integration, and management of AWS, Azure, or GCP.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-headset"></i>
+      <h3>Managed IT</h3>
+      <p>24/7 helpdesk, patch management, and proactive network monitoring.</p>
+    </div>
+  </div>
+</main>
+
+<section class="footer" id="footer">
+  <div class="box-container">
+    <div class="box">
+      <h3>Quick Links</h3>
+      <a href="../index_atn.html"><i class="fas fa-arrow-right"></i> Home</a>
+      <a href="./services_atn.html"><i class="fas fa-arrow-right"></i> Services</a>
+      <a href="./about_atn.html"><i class="fas fa-arrow-right"></i> About Us</a>
+      <a href="./contact_atn.html"><i class="fas fa-arrow-right"></i> Contact</a>
+    </div>
+    <div class="box">
+      <h3>Contact Info</h3>
+      <a href="#"><i class="fas fa-phone"></i> +91 90000 67890</a>
+      <a href="#"><i class="fas fa-envelope"></i> support@atn.com</a>
+    </div>
+  </div>
+  <div class="credit">&#169; ATN | All Rights Reserved</div>
+</section>
+
+<script>
+  (function(){
+    let lastY=window.pageYOffset;
+    const header=document.getElementById("site-header");
+    window.addEventListener("scroll",()=>{
+      let y=window.pageYOffset;
+      if(y>lastY) header.classList.add("hidden");
+      else header.classList.remove("hidden");
+      lastY=y;
+    });
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!-- index_atn.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>ATN – Advanced Technology Networks</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+   <!-- Swiper’s core CSS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p+c72PHGdzKfYHu+UH0eYD0vKt+JXhWfB4b82N10q3U6XyX+FChxpKz+NDhHUpCjZD6jDZlD0v2LqvU3KIyxwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style/_atn.css">
+  <style>
+    /* hide-on-scroll */
+    #site-header { background:#f0f0f0; padding:2rem 5%; transition:transform .3s ease; }
+    #site-header.hidden { transform:translateY(-100%); }
+  </style>
+</head>
+<body>
+
+  <header id="site-header" class="header">
+    <a href="index_atn.html" class="logo">ATN (Advanced Technology Networks)</a>
+    <nav class="navbar">
+      <a href="index_atn.html">Home</a>
+      <a href="pages/services_atn.html">Services</a>
+      <a href="pages/about_atn.html">About Us</a>
+      <a href="pages/contact_atn.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="home" id="home">
+    <h1 data-speed="-2" class="home-parallax">Connecting Your World</h1>
+    <p data-speed="5" class="home-parallax">Expert network design, cybersecurity, and managed IT for enterprises.</p>
+    <a data-speed="7" href="pages/services_atn.html" class="btn home-parallax">Our Services</a>
+  </section>
+
+  <!-- Stats -->
+  <section class="icons-container">
+    <div class="icons">
+      <i class="fas fa-network-wired"></i>
+      <div class="content">
+        <h3>500+</h3><p>Networks Deployed</p>
+      </div>
+    </div>
+    <div class="icons">
+      <i class="fas fa-shield-alt"></i>
+      <div class="content">
+        <h3>1,200+</h3><p>Security Audits</p>
+      </div>
+    </div>
+    <div class="icons">
+      <i class="fas fa-headset"></i>
+      <div class="content">
+        <h3>24/7</h3><p>Support</p>
+      </div>
+    </div>
+    <div class="icons">
+      <i class="fas fa-globe"></i>
+      <div class="content">
+        <h3>15</h3><p>Years Experience</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="services-preview" id="services-preview">
+    <h1 class="heading"> our <span>services</span> </h1>
+    <div class="box-container">
+      <div class="box">
+        <i class="fas fa-network-wired"></i>
+        <h3>Network Design</h3>
+        <p>Scalable LAN/WAN architecture tailored to your business needs.</p>
+        <a href="pages/services_atn.html" class="btn">read more</a>
+      </div>
+      <div class="box">
+        <i class="fas fa-shield-virus"></i>
+        <h3>Cybersecurity</h3>
+        <p>Comprehensive threat assessment, firewall & endpoint protection.</p>
+        <a href="pages/services_atn.html" class="btn">read more</a>
+      </div>
+      <div class="box">
+        <i class="fas fa-cloud"></i>
+        <h3>Cloud Integration</h3>
+        <p>Secure migration & management of AWS/Azure/GCP environments.</p>
+        <a href="pages/services_atn.html" class="btn">read more</a>
+      </div>
+      <div class="box">
+        <i class="fas fa-cogs"></i>
+        <h3>Managed IT</h3>
+        <p>Proactive monitoring, patching, and 24/7 helpdesk support.</p>
+        <a href="pages/services_atn.html" class="btn">read more</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Slider -->
+  <section class="featured" id="featured">
+    <h1 class="heading"><span>featured</span> projects</h1>
+    <div class="swiper featured-slider">
+      <div class="swiper-wrapper">
+        <!-- Example Slide -->
+        <div class="swiper-slide box">
+          <img src="main_images/atn_project_1.jpg" alt="Project 1">
+          <div class="content">
+            <h3>Global WAN Rollout</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>Deployed secure WAN across 50+ sites in 3 continents.</p>
+          </div>
+        </div>
+        <!-- Add more slides as needed -->
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section class="footer" id="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>Quick Links</h3>
+        <a href="index_atn.html"><i class="fas fa-arrow-right"></i> Home</a>
+        <a href="pages/services_atn.html"><i class="fas fa-arrow-right"></i> Services</a>
+        <a href="pages/about_atn.html"><i class="fas fa-arrow-right"></i> About Us</a>
+        <a href="pages/contact_atn.html"><i class="fas fa-arrow-right"></i> Contact</a>
+      </div>
+      <div class="box">
+        <h3>Contact Info</h3>
+        <a href="#"><i class="fas fa-phone"></i> +91 90000 67890</a>
+        <a href="#"><i class="fas fa-envelope"></i> support@atn.com</a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i> Mumbai, India</a>
+      </div>
+    </div>
+    <div class="credit">&#169; ATN – Advanced Technology Networks | All Rights Reserved</div>
+  </section>
+
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    (function(){
+      let lastY = window.pageYOffset;
+      const header = document.getElementById("site-header");
+      window.addEventListener("scroll", ()=>{
+        const y = window.pageYOffset;
+        if(y>lastY) header.classList.add("hidden");
+        else header.classList.remove("hidden");
+        lastY=y;
+      });
+    })();
+    new Swiper(".featured-slider",{
+      slidesPerView:3,spaceBetween:30,loop:true,
+      pagination:{el:".swiper-pagination",clickable:true},
+      navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},
+      breakpoints:{768:{slidesPerView:2},1024:{slidesPerView:3}}
+    });
+  </script>
+
+</body>
+</html>

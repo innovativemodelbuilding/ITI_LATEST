@@ -1,0 +1,162 @@
+<!-- index_humanoid_robots.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Humanoid Robots</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p+c72PHGdzKfYHu+UH0eYD0vKt+JXhWfB4b82N10q3U6XyX+FChxpKz+NDhHUpCjZD6jDZlD0v2LqvU3KIyxwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style/_humanoid_robots.css">
+  <style>
+    /* hide-on-scroll */
+    #site-header { background:#f0f0f0; padding:2rem 5%; transition:transform .3s ease; }
+    #site-header.hidden { transform:translateY(-100%); }
+    .swiper-button-next, .swiper-button-prev { color:#000; font-size:2rem; }
+  </style>
+  <!-- Swiper’s core CSS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+
+</head>
+<body>
+
+<header id="site-header" class="header">
+  <a href="index_humanoid_robots.html" class="logo">Humanoid Robots</a>
+  <nav class="navbar">
+    <a href="index_humanoid_robots.html">Home</a>
+    <a href="pages/services_humanoid_robots.html">Services</a>
+    <a href="pages/about_humanoid_robots.html">About Us</a>
+    <a href="pages/contact_humanoid_robots.html">Contact</a>
+  </nav>
+</header>
+
+<section class="home" id="home">
+  <h1 data-speed="-2" class="home-parallax">Meet Your New Colleague</h1>
+  <p data-speed="5" class="home-parallax">
+    Advanced humanoid robots for research, education, and service applications.
+  </p>
+  <a data-speed="7" href="pages/services_humanoid_robots.html" class="btn home-parallax">
+    Our Services
+  </a>
+</section>
+
+<section class="icons-container">
+  <div class="icons">
+    <i class="fas fa-robot"></i>
+    <div class="content">
+      <h3>50+</h3><p>Robots Deployed</p>
+    </div>
+  </div>
+  <div class="icons">
+    <i class="fas fa-cogs"></i>
+    <div class="content">
+      <h3>30+</h3><p>Clients</p>
+    </div>
+  </div>
+  <div class="icons">
+    <i class="fas fa-project-diagram"></i>
+    <div class="content">
+      <h3>1000+</h3><p>Hours Flight</p>
+    </div>
+  </div>
+  <div class="icons">
+    <i class="fas fa-headset"></i>
+    <div class="content">
+      <h3>24/7</h3><p>Support</p>
+    </div>
+  </div>
+</section>
+
+<section class="featured" id="featured">
+  <h1 class="heading"><span>featured</span> models</h1>
+  <div class="swiper featured-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide box">
+        <img src="main_images/hr_model_a.jpg" alt="Model A">
+        <div class="content">
+          <h3>Model A</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>Interactive service robot with 20 DOF and vision AI.</p>
+        </div>
+      </div>
+      <div class="swiper-slide box">
+        <img src="main_images/hr_model_b.jpg" alt="Model B">
+        <div class="content">
+          <h3>Model B</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p>Research platform with modular limbs and ROS integration.</p>
+        </div>
+      </div>
+      <!-- add more slides -->
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<section class="footer" id="footer">
+  <div class="box-container">
+    <div class="box">
+      <h3>Quick Links</h3>
+      <a href="index_humanoid_robots.html"><i class="fas fa-arrow-right"></i> Home</a>
+      <a href="pages/services_humanoid_robots.html"><i class="fas fa-arrow-right"></i> Services</a>
+      <a href="pages/about_humanoid_robots.html"><i class="fas fa-arrow-right"></i> About Us</a>
+      <a href="pages/contact_humanoid_robots.html"><i class="fas fa-arrow-right"></i> Contact</a>
+    </div>
+    <div class="box">
+      <h3>Contact Info</h3>
+      <a href="#"><i class="fas fa-phone"></i> +91 90000 33445</a>
+      <a href="#"><i class="fas fa-envelope"></i> robots@iti.com</a>
+    </div>
+  </div>
+  <div class="credit">&#169; Humanoid Robots | All Rights Reserved</div>
+</section>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+  (function(){
+    let lastY = window.pageYOffset;
+    const header = document.getElementById("site-header");
+    window.addEventListener("scroll", ()=>{
+      const y = window.pageYOffset;
+      if (y > lastY) header.classList.add("hidden");
+      else header.classList.remove("hidden");
+      lastY = y;
+    });
+  })();
+  new Swiper(".featured-slider", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+    pagination: { el: ".swiper-pagination", clickable: true },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    breakpoints: { 768: { slidesPerView: 1 }, 1024: { slidesPerView: 2 } }
+  });
+</script>
+
+</body>
+</html>

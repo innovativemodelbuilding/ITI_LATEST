@@ -1,0 +1,184 @@
+<!-- index_technical_services.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technical Services</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style/_technical_services.css">
+  <style>
+    #site-header { background:#f0f0f0; padding:2rem 5%; transition:transform .3s ease; }
+    #site-header.hidden { transform:translateY(-100%); }
+    .swiper-button-next, .swiper-button-prev { color:#000; font-size:2rem; }
+  </style>
+  <!-- Swiper’s core CSS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+
+</head>
+<body>
+
+<header id="site-header" class="header">
+  <a href="index_technical_services.html" class="logo">Technical Services</a>
+  <nav class="navbar">
+    <a href="index_technical_services.html">Home</a>
+    <a href="pages/services_technical_services.html">Services</a>
+    <a href="pages/about_technical_services.html">About Us</a>
+  </nav>
+</header>
+
+<section class="home" id="home">
+  <h1 data-speed="-2" class="home-parallax">Engineering Excellence</h1>
+  <p data-speed="5" class="home-parallax">
+    Comprehensive technical support and solutions—electrical, mechanical, instrumentation—for your projects.
+  </p>
+  <a data-speed="7" href="pages/services_technical_services.html" class="btn home-parallax">
+    Our Services
+  </a>
+</section>
+
+<section class="icons-container">
+  <div class="icons">
+    <i class="fas fa-tools"></i>
+    <div class="content">
+      <h3>300+</h3><p>Projects Delivered</p>
+    </div>
+  </div>
+  <div class="icons">
+    <i class="fas fa-cogs"></i>
+    <div class="content">
+      <h3>150+</h3><p>Clients</p>
+    </div>
+  </div>
+  <div class="icons">
+    <i class="fas fa-wrench"></i>
+    <div class="content">
+      <h3>500+</h3><p>Maintenance Jobs</p>
+    </div>
+  </div>
+  <div class="icons">
+    <i class="fas fa-headset"></i>
+    <div class="content">
+      <h3>24/7</h3><p>Support</p>
+    </div>
+  </div>
+</section>
+
+<section class="services-preview" id="services-preview">
+  <h1 class="heading">Our <span>Services</span></h1>
+  <div class="box-container">
+    <div class="box">
+      <i class="fas fa-bolt"></i>
+      <h3>Electrical Engineering</h3>
+      <p>Power distribution design, MCC panels, wiring layouts.</p>
+      <a href="pages/services_technical_services.html" class="btn">Read More</a>
+    </div>
+    <div class="box">
+      <i class="fas fa-cogs"></i>
+      <h3>Mechanical Engineering</h3>
+      <p>Piping design, HVAC ducting, equipment installation.</p>
+      <a href="pages/services_technical_services.html" class="btn">Read More</a>
+    </div>
+    <div class="box">
+      <i class="fas fa-microchip"></i>
+      <h3>Instrumentation</h3>
+      <p>Control systems, sensors, calibration & commissioning.</p>
+      <a href="pages/services_technical_services.html" class="btn">Read More</a>
+    </div>
+    <div class="box">
+      <i class="fas fa-chart-line"></i>
+      <h3>Energy Audits</h3>
+      <p>Site assessment, efficiency reports & optimization plans.</p>
+      <a href="pages/services_technical_services.html" class="btn">Read More</a>
+    </div>
+  </div>
+</section>
+
+<section class="featured" id="featured">
+  <h1 class="heading"><span>Featured</span> Projects</h1>
+  <div class="swiper featured-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide box">
+        <img src="main_images/ts_powerplant.jpg" alt="Power Plant">
+        <div class="content">
+          <h3>Power Plant Upgrade</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>Retrofitted control systems and MCC panels.</p>
+        </div>
+      </div>
+      <div class="swiper-slide box">
+        <img src="main_images/ts_factory.jpg" alt="Factory Automation">
+        <div class="content">
+          <h3>Factory Automation</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>Installed PLC controls and SCADA integration.</p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<section class="footer" id="footer">
+  <div class="box-container">
+    <div class="box">
+      <h3>Quick Links</h3>
+      <a href="index_technical_services.html"><i class="fas fa-arrow-right"></i> Home</a>
+      <a href="pages/services_technical_services.html"><i class="fas fa-arrow-right"></i> Services</a>
+      <a href="pages/about_technical_services.html"><i class="fas fa-arrow-right"></i> About Us</a>
+    </div>
+    <div class="box">
+      <h3>Contact Info</h3>
+      <a href="#"><i class="fas fa-phone"></i> +91 90000 99881</a>
+      <a href="#"><i class="fas fa-envelope"></i> tech@iti.com</a>
+      <a href="#"><i class="fas fa-map-marker-alt"></i> Chennai, India</a>
+    </div>
+  </div>
+  <div class="credit">&#169; Technical Services | All Rights Reserved</div>
+</section>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+  (function(){
+    let lastY = window.pageYOffset;
+    const header = document.getElementById("site-header");
+    window.addEventListener("scroll", ()=>{
+      const y = window.pageYOffset;
+      header.classList.toggle("hidden", y > lastY);
+      lastY = y;
+    });
+  })();
+  new Swiper(".featured-slider", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+    pagination: { el: ".swiper-pagination", clickable: true },
+    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+    breakpoints: { 768: { slidesPerView: 1 }, 1024: { slidesPerView: 2 } }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!-- pages/services_automation_solutions.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services – Automation Solutions</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p+c72PHGdzKfYHu+UH0eYD0vKt+JXhWfB4b82N10q3U6XyX+FChxpKz+NDhHUpCjZD6jDZlD0v2LqvU3KIyxwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../style/_automation_solutions.css">
+  <style>
+    #site-header { background:#f0f0f0; padding:2rem 5%; transition:transform .3s ease; }
+    #site-header.hidden { transform:translateY(-100%); }
+    .box-container { display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; }
+    .box-container .box { flex:1 1 calc(45% - 2rem); max-width:calc(45% - 2rem); padding:2rem; text-align:center; }
+    .box-container .box i { font-size:3rem; color:#333; margin-bottom:1rem; }
+    @media(max-width:800px){ .box-container .box{ flex:1 1 100%; max-width:100%; } }
+  </style>
+</head>
+<body>
+
+<header id="site-header" class="header">
+  <a href="../index_automation_solutions.html" class="logo">Automation Solutions</a>
+  <nav class="navbar">
+    <a href="../index_automation_solutions.html">Home</a>
+    <a href="./services_automation_solutions.html">Services</a>
+    <a href="./about_automation_solutions.html">About Us</a>
+    <a href="./contact_automation_solutions.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h1 class="section-heading">Our <span>Services</span></h1>
+  <div class="box-container">
+    <div class="box">
+      <i class="fas fa-microchip"></i>
+      <h3>PLC Programming</h3>
+      <p>Custom ladder logic & IEC 61131 code for robust control.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-robot"></i>
+      <h3>Robotics Integration</h3>
+      <p>Turnkey robotic cells & vision systems for automation.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-wifi"></i>
+      <h3>IoT Connectivity</h3>
+      <p>Edge-device setup & cloud dashboards for data insights.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-chart-line"></i>
+      <h3>Predictive Maintenance</h3>
+      <p>Machine learning models to forecast equipment health.</p>
+    </div>
+  </div>
+</main>
+
+<section class="footer" id="footer">
+  <div class="box-container">
+    <div class="box">
+      <h3>Quick Links</h3>
+      <a href="../index_automation_solutions.html"><i class="fas fa-arrow-right"></i> Home</a>
+      <a href="./services_automation_solutions.html"><i class="fas fa-arrow-right"></i> Services</a>
+      <a href="./about_automation_solutions.html"><i class="fas fa-arrow-right"></i> About Us</a>
+      <a href="./contact_automation_solutions.html"><i class="fas fa-arrow-right"></i> Contact</a>
+    </div>
+    <div class="box">
+      <h3>Contact Info</h3>
+      <a href="#"><i class="fas fa-phone"></i> +91 91234 56789</a>
+      <a href="#"><i class="fas fa-envelope"></i> info@automation-solutions.com</a>
+    </div>
+  </div>
+  <div class="credit">&#169; Automation Solutions | All Rights Reserved</div>
+</section>
+
+<script>
+  (function(){
+    let lastY = window.pageYOffset;
+    const header = document.getElementById("site-header");
+    window.addEventListener("scroll", ()=> {
+      const y = window.pageYOffset;
+      if (y > lastY) header.classList.add("hidden");
+      else header.classList.remove("hidden");
+      lastY = y;
+    });
+  })();
+</script>
+
+</body>
+</html>

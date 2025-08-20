@@ -1,0 +1,137 @@
+<!-- index_home_appliances.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home Appliances</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p+c72PHGdzKfYHu+UH0eYD0vKt+JXhWfB4b82N10q3U6XyX+FChxpKz+NDhHUpCjZD6jDZlD0v2LqvU3KIyxwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style/_home_appliances.css">
+  <style>
+    /* hide-on-scroll */
+    #site-header { background:#f0f0f0; padding:2rem 5%; transition:transform .3s ease; }
+    #site-header.hidden { transform:translateY(-100%); }
+  </style>
+  <!-- Swiper’s core CSS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+
+</head>
+<body>
+
+<header id="site-header" class="header">
+  <a href="index_home_appliances.html" class="logo">Home Appliances</a>
+  <nav class="navbar">
+    <a href="index_home_appliances.html">Home</a>
+    <a href="pages/services_home_appliances.html">Services</a>
+    <a href="pages/about_home_appliances.html">About Us</a>
+    <a href="pages/contact_home_appliances.html">Contact</a>
+  </nav>
+</header>
+
+<section class="home" id="home">
+  <h1 data-speed="-2" class="home-parallax">Upgrade Your Home</h1>
+  <p data-speed="5" class="home-parallax">
+    Top‑quality appliances for every room—reliable, efficient, and stylish.
+  </p>
+  <a data-speed="7" href="pages/services_home_appliances.html" class="btn home-parallax">
+    Our Services
+  </a>
+</section>
+
+<section class="icons-container">
+  <div class="icons">
+    <i class="fas fa-box"></i>
+    <div class="content">
+      <h3>150+</h3><p>Products</p>
+    </div>
+  </div>
+  <div class="icons">
+    <i class="fas fa-users"></i>
+    <div class="content">
+      <h3>500+</h3><p>Happy Customers</p>
+    </div>
+  </div>
+  <div class="icons">
+    <i class="fas fa-headset"></i>
+    <div class="content">
+      <h3>24/7</h3><p>Support</p>
+    </div>
+  </div>
+  <div class="icons">
+    <i class="fas fa-award"></i>
+    <div class="content">
+      <h3>10</h3><p>Years Experience</p>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <h1 class="heading"> featured <span>appliances</span> </h1>
+  <div class="box-container">
+    <div class="box">
+      <img src="../main_images/fridge_model.jpg" alt="Refrigerator">
+      <h3>Smart Refrigerator</h3>
+      <p>Energy‑efficient, frost‑free fridge with touch display.</p>
+      <a href="pages/services_home_appliances.html" class="btn">Learn More</a>
+    </div>
+    <div class="box">
+      <img src="../main_images/washing_machine.jpg" alt="Washing Machine">
+      <h3>Front‑Load Washer</h3>
+      <p>7 kg capacity, multiple wash modes, inverter motor.</p>
+      <a href="pages/services_home_appliances.html" class="btn">Learn More</a>
+    </div>
+    <div class="box">
+      <img src="../main_images/microwave_oven.jpg" alt="Microwave Oven">
+      <h3>Microwave Oven</h3>
+      <p>Solo & grill functions, 800 W power, easy‑clean interior.</p>
+      <a href="pages/services_home_appliances.html" class="btn">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<section class="footer" id="footer">
+  <div class="box-container">
+    <div class="box">
+      <h3>Quick Links</h3>
+      <a href="index_home_appliances.html"><i class="fas fa-arrow-right"></i> Home</a>
+      <a href="pages/services_home_appliances.html"><i class="fas fa-arrow-right"></i> Services</a>
+      <a href="pages/about_home_appliances.html"><i class="fas fa-arrow-right"></i> About Us</a>
+      <a href="pages/contact_home_appliances.html"><i class="fas fa-arrow-right"></i> Contact</a>
+    </div>
+    <div class="box">
+      <h3>Contact Info</h3>
+      <a href="#"><i class="fas fa-phone"></i> +91 90000 99887</a>
+      <a href="#"><i class="fas fa-envelope"></i> support@homeappliances.com</a>
+      <a href="#"><i class="fas fa-map-marker-alt"></i> Delhi, India</a>
+    </div>
+  </div>
+  <div class="credit">&#169; Home Appliances | All Rights Reserved</div>
+</section>
+
+<script>
+  (function(){
+    let lastY = window.pageYOffset;
+    const header = document.getElementById("site-header");
+    window.addEventListener("scroll", ()=>{
+      const y = window.pageYOffset;
+      if (y > lastY) header.classList.add("hidden");
+      else header.classList.remove("hidden");
+      lastY = y;
+    });
+  })();
+</script>
+
+</body>
+</html>

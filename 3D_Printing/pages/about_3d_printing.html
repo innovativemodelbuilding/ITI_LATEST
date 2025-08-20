@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About 3D Printing</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p+c72PHGdzKfYHu+UH0eYD0vKt+JXhWfB4b82N10q3U6XyX+FChxpKz+NDhHUpCjZD6jDZlD0v2LqvU3KIyxwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../style/_3d_printing.css">
+  <style>
+    /* hide-on-scroll */
+    #site-header { background-color:#e6e6e6; padding:3rem 9%; transition:transform 0.3s ease; }
+    #site-header.hidden { transform:translateY(-100%); }
+  </style>
+</head>
+<body>
+  <header id="site-header" class="header">
+    <div id="menu-btn" class="fas fa-bars"></div>
+    <a href="../index.html" class="logo"><span>Institute</span> of Technology & Innovation</a>
+    <nav class="navbar">
+      <a href="../index_3d_printing.html">Home</a>
+      <a href="../3D_Printing/index_3d_printing.html">Printers</a>
+      <a href="./services_3d_printing.html">Services</a>
+      <a href="./about_3d_printing.html">About Us</a>
+      <a href="./contact_3d_printing.html">Contact</a>
+      
+    </nav>
+  </header>
+
+  <section class="home" id="about">
+    <h1 data-speed="-2" class="home-parallax">Who We Are</h1>
+    <p
+      data-speed="5"
+      class="home-parallax"
+      style="max-width:800px; margin:2rem auto; font-size:1.8rem; color:var(--light-color); line-height:1.6;"
+    >
+      Our 3D Printing Hub began with a passion for transforming ideas into reality using additive manufacturing. We’re a collective of engineers, designers, and technicians dedicated to delivering precision, quality, and speed in every print. From prototyping to production, our mission is to empower innovators across industries to bring their visions to life.
+    </p>
+    <a data-speed="7" href="../index.html" class="btn home-parallax">Explore Printers</a>
+  </section>
+
+  <section class="icons-container">
+    <div class="icons">
+      <i class="fas fa-eye"></i>
+      <div class="content">
+        <h3>Our Vision</h3>
+        <p>To democratize access to advanced 3D printing solutions for businesses and creators worldwide.</p>
+      </div>
+    </div>
+    <div class="icons">
+      <i class="fas fa-bullseye"></i>
+      <div class="content">
+        <h3>Our Mission</h3>
+        <p>To deliver fast, reliable, and sustainable additive manufacturing services tailored to your needs.</p>
+      </div>
+    </div>
+    <div class="icons">
+      <i class="fas fa-heart"></i>
+      <div class="content">
+        <h3>Our Values</h3>
+        <p>Innovation, precision, integrity, and environmental responsibility guide everything we do.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="team">
+    <h1 class="heading"><span>Our</span> Team</h1>
+    <div class="box-container">
+      <div class="box">
+        <img src="../main_images/team1.jpg" alt="Founder & CEO" style="border-radius:50%; width:8rem; height:8rem; object-fit:cover;">
+        <h3>Dr. Arjun Rao</h3>
+        <p>Founder & CEO</p>
+      </div>
+      <div class="box">
+        <img src="../main_images/team2.jpg" alt="Head of Engineering" style="border-radius:50%; width:8rem; height:8rem; object-fit:cover;">
+        <h3>Meera Shah</h3>
+        <p>Head of Engineering</p>
+      </div>
+      <div class="box">
+        <img src="../main_images/team3.jpg" alt="Production Manager" style="border-radius:50%; width:8rem; height:8rem; object-fit:cover;">
+        <h3>Rohan Patel</h3>
+        <p>Production Manager</p>
+      </div>
+      <div class="box">
+        <img src="../main_images/team4.jpg" alt="Lead Designer" style="border-radius:50%; width:8rem; height:8rem; object-fit:cover;">
+        <h3>Pooja Nair</h3>
+        <p>Lead Designer</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer" id="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>Our Branches</h3>
+        <a href="#"><i class="fas fa-map-marker-alt"></i> India</a>
+      </div>
+      <div class="box">
+        <h3>Quick Links</h3>
+        <a href="../index.html"><i class="fas fa-arrow-right"></i> Home</a>
+        <a href="./index_3d_printing.html"><i class="fas fa-arrow-right"></i> Printers</a>
+        <a href="./pages/contact_3d_printing.html"><i class="fas fa-arrow-right"></i> Contact</a>
+      </div>
+      <div class="box">
+        <h3>Contact Info</h3>
+        <a href="#"><i class="fas fa-phone"></i> +91 90000 12345</a>
+        <a href="#"><i class="fas fa-envelope"></i> 3dprint@iti.com</a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana</a>
+      </div>
+      <div class="box">
+        <h3>Social Media</h3>
+        <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+      </div>
+    </div>
+    <div class="credit">&#169; Institute of Technology & Innovation | All Rights Reserved</div>
+  </section>
+
+  <script>
+    (function(){
+      let lastScrollY = window.pageYOffset;
+      const header = document.getElementById("site-header");
+      window.addEventListener("scroll", () => {
+        const current = window.pageYOffset;
+        if (current > lastScrollY) header.classList.add("hidden");
+        else header.classList.remove("hidden");
+        lastScrollY = current;
+      });
+    })();
+  </script>
+</body>
+</html>

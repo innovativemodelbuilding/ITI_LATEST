@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D Printing Services & Marketplace</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-p+c72PHGdzKfYHu+UH0eYD0vKt+JXhWfB4b82N10q3U6XyX+FChxpKz+NDhHUpCjZD6jDZlD0v2LqvU3KIyxwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style/_3d_printing.css">
+
+  <style>
+    /* hide-on-scroll */
+    #site-header {
+      background-color: #e6e6e6;
+      transition: transform 0.3s ease;
+    }
+    #site-header.hidden {
+      transform: translateY(-100%);
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #000;
+      font-size: 2rem;
+    }
+  </style>
+  <!-- Swiper’s core CSS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+
+</head>
+<body>
+
+<header id="site-header" class="header">
+    <div id="menu-btn" class="fas fa-bars"></div>
+    <a href="../index.html" class="logo"><span>Institute</span> of Technology & Innovation</a>
+    <nav class="navbar">
+      <a href="./index_3d_printing.html">Home</a>
+      <a href="../3D_Printing/index_3d_printing.html">Printers</a>
+      <a href="./pages/services_3d_printing.html">Services</a>
+      <a href="./pages/about_3d_printing.html">About Us</a>
+      <a href="./pages/contact_3d_printing.html">Contact</a>
+      
+    </nav>
+  </header>
+
+<!-- Hero Section -->
+<section class="home" id="home">
+  <h3 data-speed="-2" class="home-parallax">Explore 3D Printing</h3>
+  <a data-speed="7" href="./pages/services_3d_printing.html" class="btn home-parallax">
+    View Services
+  </a>
+</section>
+
+<!-- Stats Icons -->
+<section class="icons-container">
+  <div class="icons">
+    <i class="fas fa-layer-group"></i>
+    <div class="content">
+      <h3>200+</h3>
+      <p>Printers Sold</p>
+    </div>
+  </div>
+  <div class="icons">
+    <i class="fas fa-users"></i>
+    <div class="content">
+      <h3>150+</h3>
+      <p>Happy Clients</p>
+    </div>
+  </div>
+  <div class="icons">
+    <i class="fas fa-project-diagram"></i>
+    <div class="content">
+      <h3>500+</h3>
+      <p>Prototypes Built</p>
+    </div>
+  </div>
+  <div class="icons">
+    <i class="fas fa-graduation-cap"></i>
+    <div class="content">
+      <h3>30+</h3>
+      <p>Training Courses</p>
+    </div>
+  </div>
+</section>
+
+<!-- Popular Printers -->
+<section class="products" id="products">
+  <h1 class="heading"> popular <span>printers</span> </h1>
+  <div class="box-container">
+    <div class="box">
+      <img src="../main_images/print_rp_1.jpg" alt="Model X">
+      <h3>Model X</h3>
+      <div class="price"><span>From:</span> ₹45,000/-</div>
+      <p>FDM • 220×220×250mm • 0.1mm layers • Auto-level</p>
+      <a href="./pages/services_3d_printing.html" class="btn">Learn More</a>
+    </div>
+    <div class="box">
+      <img src="../main_images/print_resin_1.jpg" alt="Model R">
+      <h3>Model R</h3>
+      <div class="price"><span>From:</span> ₹60,000/-</div>
+      <p>Resin • 130×82×160mm • 50µm XY • Touchscreen</p>
+      <a href="./pages/services_3d_printing.html" class="btn">Learn More</a>
+    </div>
+    <div class="box">
+      <img src="../main_images/print_hybrid_1.jpg" alt="Model H">
+      <h3>Model H</h3>
+      <div class="price"><span>From:</span> ₹80,000/-</div>
+      <p>Hybrid • Dual extrusion • 300×300×400mm • Heated</p>
+      <a href="./pages/services_3d_printing.html" class="btn">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- Services Preview -->
+<section class="services-preview" id="services-preview">
+  <h1 class="heading"> our <span>services</span> </h1>
+  <div class="box-container">
+    <div class="box">
+      <i class="fas fa-stopwatch"></i>
+      <h3>Rapid Prototyping</h3>
+      <p>Get fast-turnaround prototypes from your CAD files, ready in as little as 24 hours.</p>
+      <a href="./pages/services_3d_printing.html" class="btn">read more</a>
+    </div>
+    <div class="box">
+      <i class="fas fa-industry"></i>
+      <h3>Batch Production</h3>
+      <p>Small to medium runs with consistent quality and pricing—ideal for low-volume manufacturing.</p>
+      <a href="./pages/services_3d_printing.html" class="btn">read more</a>
+    </div>
+    <div class="box">
+      <i class="fas fa-cogs"></i>
+      <h3>Printer Maintenance</h3>
+      <p>Scheduled upkeep and repairs to keep your printers running at peak performance.</p>
+      <a href="./pages/services_3d_printing.html" class="btn">read more</a>
+    </div>
+    <div class="box">
+      <i class="fas fa-chalkboard-teacher"></i>
+      <h3>Hands‑on Training</h3>
+      <p>Comprehensive courses covering design, slicing, and printer operation led by experts.</p>
+      <a href="./pages/training_3d_printing.html" class="btn">read more</a>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Products Slider -->
+<section class="featured" id="featured">
+  <h1 class="heading"><span>featured</span> printers</h1>
+  <div class="swiper featured-slider">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide box">
+        <img src="../main_images/print_rp_1.jpg" alt="Model X">
+        <div class="content">
+          <h3>Model X</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="price">₹45,000/-</div>
+          <a href="./pages/services_3d_printing.html" class="btn">Learn More</a>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide box">
+        <img src="../main_images/print_resin_1.jpg" alt="Model R">
+        <div class="content">
+          <h3>Model R</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="price">₹60,000/-</div>
+          <a href="./pages/services_3d_printing.html" class="btn">Learn More</a>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide box">
+        <img src="../main_images/print_hybrid_1.jpg" alt="Model H">
+        <div class="content">
+          <h3>Model H</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <div class="price">₹80,000/-</div>
+          <a href="./pages/services_3d_printing.html" class="btn">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<!-- Footer -->
+<section class="footer" id="footer">
+  <div class="box-container">
+    <div class="box">
+      <h3>Our Branches</h3>
+      <a href="#"><i class="fas fa-map-marker-alt"></i> India</a>
+    </div>
+    <div class="box">
+      <h3>Quick Links</h3>
+      <a href="../index.html"><i class="fas fa-arrow-right"></i> Home</a>
+      <a href="./index_3d_printing.html"><i class="fas fa-arrow-right"></i> Printers</a>
+      <a href="./pages/contact_3d_printing.html"><i class="fas fa-arrow-right"></i> Contact</a>
+    </div>
+    <div class="box">
+      <h3>Contact Info</h3>
+      <a href="#"><i class="fas fa-phone"></i> +91 90000 12345</a>
+      <a href="#"><i class="fas fa-envelope"></i> 3dprint@iti.com</a>
+      <a href="#"><i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana</a>
+    </div>
+    <div class="box">
+      <h3>Social Media</h3>
+      <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+      <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
+  </div>
+  <div class="credit">&#169; Institute of Technology & Innovation | All Rights Reserved</div>
+</section>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+  (function(){
+    let lastScrollY = window.pageYOffset;
+    const header = document.getElementById("site-header");
+    window.addEventListener("scroll", () => {
+      const currentY = window.pageYOffset;
+      if (currentY > lastScrollY) header.classList.add("hidden");
+      else header.classList.remove("hidden");
+      lastScrollY = currentY;
+    });
+  })();
+  new Swiper(".featured-slider", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    pagination: { el: ".swiper-pagination", clickable: true },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!-- pages/services_virtual_dressing_arvr.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services – Virtual Dressing AR/VR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="../style/_virtual_dressing_arvr.css"/>
+  <style>
+    #site-header{background:#f0f0f0;padding:2rem 5%;transition:transform .3s ease;}
+    #site-header.hidden{transform:translateY(-100%);}
+    .box-container{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;}
+    .box{flex:1 1 calc(45% - 2rem);max-width:calc(45% - 2rem);padding:2rem;text-align:center;}
+    .box i{font-size:3rem;color:#333;margin-bottom:1rem;}
+    @media(max-width:800px){.box{flex:1 1 100%;max-width:100%;}}
+  </style>
+</head>
+<body>
+
+<header id="site-header" class="header">
+  <a href="../index_virtual_dressing_arvr.html" class="logo">Virtual Dressing AR/VR</a>
+  <nav class="navbar">
+    <a href="../index_virtual_dressing_arvr.html">Home</a>
+    <a href="./services_virtual_dressing_arvr.html">Services</a>
+    <a href="./about_virtual_dressing_arvr.html">About Us</a>
+  </nav>
+</header>
+
+<main>
+  <h1 class="section-heading">Our <span>Services</span></h1>
+  <div class="box-container">
+    <div class="box">
+      <i class="fas fa-camera"></i>
+      <h3>3D Body Scanning</h3>
+      <p>Precision avatar generation from any device camera.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-vr-cardboard"></i>
+      <h3>AR Try‑On</h3>
+      <p>Seamless virtual fitting in real time.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-vr-cardboard"></i>
+      <h3>VR Showroom</h3>
+      <p>Immersive product showcases in VR.</p>
+    </div>
+    <div class="box">
+      <i class="fas fa-chart-line"></i>
+      <h3>Data Analytics</h3>
+      <p>Customer engagement insights & reporting.</p>
+    </div>
+  </div>
+</main>
+
+<section class="footer" id="footer">
+  <div class="box-container">
+    <div class="box">
+      <h3>Quick Links</h3>
+      <a href="../index_virtual_dressing_arvr.html"><i class="fas fa-arrow-right"></i> Home</a>
+      <a href="./services_virtual_dressing_arvr.html"><i class="fas fa-arrow-right"></i> Services</a>
+      <a href="./about_virtual_dressing_arvr.html"><i class="fas fa-arrow-right"></i> About Us</a>
+    </div>
+    <div class="box">
+      <h3>Contact Info</h3>
+      <a href="#"><i class="fas fa-phone"></i> +91 90000 11223</a>
+      <a href="#"><i class="fas fa-envelope"></i> arvr@iti.com</a>
+    </div>
+  </div>
+  <div class="credit">&#169; Virtual Dressing AR/VR | All Rights Reserved</div>
+</section>
+
+<script>
+  (function(){
+    let lastY=window.pageYOffset;
+    const header=document.getElementById("site-header");
+    window.addEventListener("scroll",()=>{
+      header.classList.toggle("hidden",window.pageYOffset>lastY);
+      lastY=window.pageYOffset;
+    });
+  })();
+</script>
+
+</body>
+</html>

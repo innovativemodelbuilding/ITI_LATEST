@@ -1,0 +1,120 @@
+<!-- pages/about_virtual_dressing_arvr.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us – Virtual Dressing AR/VR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="../style/_virtual_dressing_arvr.css"/>
+  <style>
+    #site-header{background:#f0f0f0;padding:2rem 5%;transition:transform .3s ease;}
+    #site-header.hidden{transform:translateY(-100%);}
+    .icons-container{display:flex;justify-content:center;gap:2rem;margin:3rem 0;}
+    .icons{text-align:center;max-width:200px;}
+    .icons i{font-size:2.5rem;color:#333;margin-bottom:1rem;}
+    #team .box-container{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;}
+    #team .box{text-align:center;flex:1 1 calc(45% - 2rem);max-width:calc(45% - 2rem);}
+    #team img{border-radius:50%;width:8rem;height:8rem;object-fit:cover;}
+    @media(max-width:800px){#team .box{flex:1 1 100%;max-width:100%;}}
+  </style>
+</head>
+<body>
+
+<header id="site-header" class="header">
+  <a href="../index_virtual_dressing_arvr.html" class="logo">Virtual Dressing AR/VR</a>
+  <nav class="navbar">
+    <a href="../index_virtual_dressing_arvr.html">Home</a>
+    <a href="./services_virtual_dressing_arvr.html">Services</a>
+    <a href="./about_virtual_dressing_arvr.html">About Us</a>
+  </nav>
+</header>
+
+<section class="hero-contact">
+  <h3>Contact Us</h3>
+</section>
+
+<section class="contact" id="contact">
+  <div class="row">
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps?q=17.395961,78.456449&z=16&output=embed"
+        allowfullscreen loading="lazy">
+      </iframe>
+      <div class="info">
+        <h3>Visit Us</h3>
+        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+        <p><i class="fas fa-envelope"></i> support@mobileservice.in</p>
+        <p>
+          <i class="fas fa-map-marker-alt"></i>
+          12‑3‑456, MG Road, Hyderabad, Telangana, India
+        </p>
+      </div>
+    </div>
+    <form id="contact-form">
+      <h3>Send Us a Message</h3>
+      <input type="text" name="name" placeholder="Your Name" class="box" required/>
+      <input type="email" name="email" placeholder="Your Email" class="box" required/>
+      <input type="text" name="subject" placeholder="Subject" class="box" required/>
+      <textarea name="message" class="box" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<section class="footer" id="footer">
+  <div class="box-container">
+    <div class="box">
+      <h3>Quick Links</h3>
+      <a href="../mobile_service_index.html"><i class="fas fa-arrow-right"></i> Home</a>
+      <a href="services.html"><i class="fas fa-arrow-right"></i> Services</a>
+      <a href="about_us.html"><i class="fas fa-arrow-right"></i> About Us</a>
+      <a href="contact_us.html"><i class="fas fa-arrow-right"></i> Contact</a>
+    </div>
+    <div class="box">
+      <h3>Contact Info</h3>
+      <a href="#"><i class="fas fa-phone"></i> +91 98765 43210</a>
+      <a href="#"><i class="fas fa-envelope"></i> support@mobileservice.in</a>
+      <a href="#"><i class="fas fa-map-marker-alt"></i> Hyderabad, India</a>
+    </div>
+  </div>
+  <div class="credit">
+    &#169; 2025 Mobile Service Center | All Rights Reserved
+  </div>
+</section>
+
+<script src="../js/script.js"></script>
+<script>
+  (function() {
+    let lastY = window.pageYOffset;
+    const header = document.getElementById("site-header");
+    window.addEventListener("scroll", function() {
+      const y = window.pageYOffset;
+      if (y > lastY) header.classList.add("hidden");
+      else header.classList.remove("hidden");
+      lastY = y;
+    });
+  })();
+
+  // Contact form via Gmail
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const to = "support@mobileservice.in";
+    const su = encodeURIComponent(this.subject.value.trim());
+    const bd = encodeURIComponent(
+      "Name: " + this.name.value.trim() + "\n" +
+      "Email: " + this.email.value.trim() + "\n\n" +
+      this.message.value.trim()
+    );
+    window.open(
+      `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${su}&body=${bd}`,
+      "_blank"
+    );
+  });
+</script>
+</body>
+</html>
